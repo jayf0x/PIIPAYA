@@ -3,8 +3,7 @@
 Local De-Identification application too for PII data.
 This repo contains the public landings page.
 
----
 
-# Releases
+## Releases
 
 Estimated first public release planned and april.
