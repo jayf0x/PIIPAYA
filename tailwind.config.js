@@ -31,8 +31,8 @@ export default ({
           "100%": { transform: "rotate(0.0deg)" },
         },
         pan: {
-          "0%": { transform: "translate(0, 0)" },
-          "100%": { transform: "translate(-12px, -12px)" },
+          "0%": { transform: "translate(0, 0)",  scale: 1.0},
+          "100%": { transform: "translate(-12px, -12px) ",scale: -1.0},
         },
       },
       animation: {
