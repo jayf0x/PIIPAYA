@@ -1,7 +1,7 @@
 {
   "name": "DeID",
   "short_name": "DeID",
-  "description": "De-Indetification app for PII data tags and narrative coherence.",
+  "description": "De-Identification app for PII data tags and narrative coherence.",
   "start_url": "/",
   "theme_color": "#000000",
   "background_color": "#000000",

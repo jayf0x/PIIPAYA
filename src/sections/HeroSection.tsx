@@ -38,7 +38,7 @@ export const HeroSection = () => (
       className="flex flex-col items-center gap-6 text-center max-w-3xl"
     >
       <motion.img
-        src="/logo.png"
+        src="./logo.png"
         alt="DeID"
         className="h-24 w-auto"
         initial={{ opacity: 0, scale: 0.9 }}
