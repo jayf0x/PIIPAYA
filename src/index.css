@@ -2,25 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html {
   scroll-behavior: smooth;
-  padding: none;
-  overflow: hidden;
-  background: transparent;
+}
+
+body {
+  background: var(--background);
 }
 
 #root {
-  isolation: isolate
+  isolation: isolate;
 }
 
 :root {
-  --background: #f9f9f9;
-  --foreground: #101011;
+  --background: #f7f7f8;
+  --foreground: #0f0f10;
   --primary: #2563eb;
+  --muted: #6b7280;
 }
 
 .dark {
-  --background: #090909;
-  --foreground: #f1f1f1;
+  --background: #09090b;
+  --foreground: #f1f1f3;
   --primary: #3b82f6;
+  --muted: #9ca3af;
+}
+
+
+@theme {
+  --breakpoint-sm: 40rem;
+  --breakpoint-lg: 64rem;
 }

@@ -6,3 +6,6 @@ build
 !dist
 
 .keep
+.claude
+.codex
+.agent
