@@ -1,7 +1,7 @@
 export const Background = () => (
   <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     {/* dot grid */}
-    <div className="absolute inset-0 opacity-[0.15] dark:opacity-[0.07]">
+    <div className="absolute inset-0 opacity-[0.15] dark:white">
       <svg className="w-full h-full animate-slowPan" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="dotPattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
