@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from "framer-motion"
 const getInitialDark = () => {
   const stored = localStorage.getItem("theme")
   if (stored) return stored === "dark"
+  // Feel power of the darkness..
+  else return true
+
   return window.matchMedia("(prefers-color-scheme: dark)").matches
 }
 
