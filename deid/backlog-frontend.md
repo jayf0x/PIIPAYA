@@ -54,3 +54,9 @@ type: feature
 Problem: Preview selection, attachment open/edit/reconvert, and preview save orchestration remain route-owned.
 Why this is a problem: Attachment and preview logic has high complexity and is difficult to reason about when mixed with route composition.
 Done looks like: Preview/attachment orchestration is extracted to a dedicated module with typed action APIs used by the route.
+
+
+
+## FEATURE: add one shot with GLiNER
+Add support in the UI to enable or use GLiNER.
+user should be able to select to only use GLiNER as one-shot solution.
