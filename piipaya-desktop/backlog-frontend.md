@@ -61,6 +61,9 @@ Problem: Preview selection, attachment open/edit/reconvert, and preview save orc
 Why this is a problem: Attachment and preview logic has high complexity and is difficult to reason about when mixed with route composition.
 Done looks like: Preview/attachment orchestration is extracted to a dedicated module with typed action APIs used by the route.
 
+## BUG: visible overflow with a lot of attachment
+When attaching +50 files, both the file tags element and the conversation status element (when expanded) give overflow.
+Each should have a fixed max-height and a scrollable overflow.
 
 ## BUG: Tag IP ADDRESS has no color highlight
 Expect each tag to have a unique color.
