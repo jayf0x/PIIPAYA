@@ -7,7 +7,7 @@ const GITHUB_URL = "https://github.com/jayf0x/PIIPAYA"
 export const Home = () => (
   <>
     <HeroSection />
-    <DocsSection />
+    {/* <DocsSection /> */}
 
     <footer className="py-8 px-6 border-t border-gray-200/60 dark:border-white/[0.07] text-center">
       <p className="text-sm text-gray-400 flex items-center justify-center gap-2">
