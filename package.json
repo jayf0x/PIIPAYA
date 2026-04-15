@@ -2,6 +2,7 @@
   "name": "deid-monorepo",
   "private": true,
   "scripts": {
-    "release:desktop": "bash scripts/release-desktop.sh"
+    "release:desktop": "bash scripts/release-desktop.sh",
+    "release:site": "bash scripts/release-site.sh"
   }
 }
