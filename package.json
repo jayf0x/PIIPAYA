@@ -1,0 +1,7 @@
+{
+  "name": "deid-monorepo",
+  "private": true,
+  "scripts": {
+    "release:desktop": "bash scripts/release-desktop.sh"
+  }
+}
