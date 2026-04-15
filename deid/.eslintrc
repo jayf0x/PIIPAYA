@@ -1,0 +1,30 @@
+{
+  "rules": {
+    // Objects: allow all properties on one line (good for short objects),
+    // but force each property on its own line when the object is multiline.
+    "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+
+    // Objects: prefer multiline objects to have a newline after { and before }.
+    // This helps keep short objects compact while making larger ones readable.
+    "object-curly-newline": ["error", {
+      "multiline": true,
+      "consistent": true
+    }],
+
+    // Arrays: allow short arrays (like ["*"] or a single long string) on one line.
+    // Force each element on its own line only when the array becomes "large"
+    // (e.g. 3+ items or when any element is complex/long).
+    "array-element-newline": ["error", {
+      "multiline": true,
+      "minItems": 3   // Adjust this threshold: 2, 3, 4... whatever feels "super large" to you
+    }],
+
+    // Arrays: control brackets – prefer no newline after [ / before ] for short arrays.
+    "array-bracket-newline": ["error", {
+      "multiline": true
+    }],
+
+    // "object-curly-spacing": ["error", "always"],
+    // "array-bracket-spacing": ["error", "never"]
+  }
+}

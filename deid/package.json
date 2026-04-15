@@ -1,0 +1,46 @@
+{
+  "name": "deid",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run tauri dev",
+    "dd": "bun run tauri dev --verbose --exit-on-panic",
+    "tsc": "node node_modules/.bin/tsc --noEmit 2>&1 | head -40",
+    "clean": "cargo clean --manifest-path ./src-tauri/Cargo.toml",
+    "dev:web": "vite dev",
+    "build": "vite build & cargo tauri build",
+    "build:sidecar": "bash ./scripts/build-sidecar.sh",
+    "preview": "vite preview",
+    "test:python": "bash ./scripts/test-python.sh",
+    "test:e2e": "bash ./scripts/test-e2e.sh",
+    "test": "bun run test:python",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@svar-ui/svelte-core": "^2.2.0",
+    "@tauri-apps/api": "2.10.1",
+    "@tauri-apps/plugin-opener": "2.5.3",
+    "carbon-components-svelte": "^0.106.0"
+  },
+  "devDependencies": {
+    "@wdio/cli": "9.20.0",
+    "@wdio/local-runner": "9.20.0",
+    "@wdio/mocha-framework": "9.20.0",
+    "@wdio/spec-reporter": "9.20.0",
+    "@sveltejs/adapter-static": "3.0.10",
+    "@sveltejs/kit": "2.55.0",
+    "@sveltejs/vite-plugin-svelte": "5.1.1",
+    "svelte": "5.54.0",
+    "svelte-check": "4.4.5",
+    "typescript": "5.6.3",
+    "vite": "6.4.1",
+    "@tauri-apps/cli": "2.10.1",
+    "chromedriver": "138.0.1",
+    "wdio-chromedriver-service": "8.1.1",
+    "webdriverio": "9.20.0"
+  }
+}

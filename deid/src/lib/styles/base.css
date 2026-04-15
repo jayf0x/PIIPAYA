@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background: var(--surface-app);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* ── Carbon global override resets ─────────────────
+   Carbon's white.css sets its own body background and
+   font — we reassert our design tokens after import.   */
+body {
+  background-color: var(--surface-app) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Suppress Carbon's default focus outline (we use focus-ring tokens) */
+.bx--btn:focus,
+.bx--select-input:focus,
+.bx--text-input:focus,
+.bx--slider__thumb:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Carbon sets global link color — keep ours */
+a {
+  color: var(--action-primary);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Native select option elements pick up body bg for dark mode */
+option {
+  background: var(--surface-solid);
+  color: var(--text-primary);
+}
+
+/* Smooth theme transition on the root */
+html {
+  transition: background-color var(--duration-normal) ease,
+              color var(--duration-normal) ease;
+}
+
+/* Selection color */
+::selection {
+  background: var(--action-primary-soft);
+  color: var(--text-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-mid);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}

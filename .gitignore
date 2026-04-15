@@ -1,9 +1,6 @@
-node_modules
-build
+.DS_Store
+.git
 .env
-
-# used for github pages
-!dist
 
 .keep
 .claude

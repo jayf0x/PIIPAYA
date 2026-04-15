@@ -1,0 +1,6 @@
+node_modules
+build
+.env
+
+# used for github pages
+!dist

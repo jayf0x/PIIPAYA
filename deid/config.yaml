@@ -1,0 +1,123 @@
+db_path: "deid.db"
+plugin_dir: "~/Library/Application Support/DeID/plugins/"
+generator:
+  seed: "global_salt_v1"
+  likeliness: 1.0
+  consistency: 0.1
+normalization:
+  lowercase: true
+  strip_accents: true
+  split_by_space: true
+nlp:
+  spacy_model: "en_core_web_lg"
+  language: "en"
+  score_threshold: 0.35
+  low_confidence_score_multiplier: 0.4
+  low_score_entity_names:
+    - ORG
+    - ORGANIZATION
+  labels_to_ignore: []
+  custom_detectors: []
+processing:
+  chunk_size_chars: 2000
+  max_workers: 4
+  reload_nlp_on_run: false
+llm:
+  endpoint: "http://127.0.0.1:11434"
+  model: "qwen3.5:9b"
+  enabled: true
+anonymization:
+  email_domain_pool:
+    - example.com
+    - mail.test
+    - corp.local
+  preserve_phone_country_prefix: true
+  phone_default_region: "US"
+  date_shift_days_min: -365
+  date_shift_days_max: 365
+  date_format_profiles:
+    default:
+      - "%m/%d/%Y"
+      - "%m-%d-%Y"
+      - "%Y-%m-%d"
+      - "%m/%d/%Y %I:%M %p"
+      - "%Y-%m-%dT%H:%M:%S"
+      - "%B %d, %Y"
+initial_name_pool:
+  default:
+    - Alice
+    - Bob
+    - Charlie
+    - Derrick
+    - Edith
+    - Frank
+    - Gertrude
+    - Hank
+  lotr:
+    - Frodo
+    - Samwise
+    - Aragorn
+    - Legolas
+    - Gimli
+    - Gandalf
+    - Arwen
+    - Eowyn
+    - Boromir
+    - Elrond
+location_name_pool:
+  default:
+    cities:
+      - Brussels
+      - Paris
+      - Berlin
+      - Lisbon
+      - Oslo
+      - Kyoto
+    countries:
+      - Belgium
+      - France
+      - Germany
+      - Portugal
+      - Norway
+      - Japan
+  noir:
+    cities:
+      - Chicago
+      - Glasgow
+      - Marseille
+    countries:
+      - United States
+      - Scotland
+      - France
+  lotr:
+    realms:
+      - The Shire
+      - Rivendell
+      - Gondor
+      - Rohan
+      - Mordor
+    landmarks:
+      - Mount Doom
+      - Minas Tirith
+      - Helm's Deep
+entities_to_mask:
+  - PERSON
+  - LOCATION
+  - EMAIL_ADDRESS
+  - PHONE_NUMBER
+  - DATE_TIME
+  - MONEY
+  - NRP
+  - CREDIT_CARD
+  - IP_ADDRESS
+  - MAC_ADDRESS
+  - URL
+  - IBAN_CODE
+  - CRYPTO
+  - MEDICAL_LICENSE
+  - ID
+  - US_BANK_NUMBER
+  - US_DRIVER_LICENSE
+  - US_ITIN
+  - US_PASSPORT
+  - US_SSN

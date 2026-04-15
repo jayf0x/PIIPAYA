@@ -1,11 +1,21 @@
-# DeID - Home page
+# DeID - Replace PII data with narrative coherence
 
-Local De-Identification application too for PII data.
-This repo contains the public landings page.
+> Currently only fully supporting on MacOS.
 
-Site can be visited [here](https://jayf0x.github.io/DeID/)
+Local MacOS app to remove any sensitive data.
+Support file batching, `OCR` support for most common image types, PDF and DOCX.
 
 
-## Releases
 
-Estimated first public release planned and april.
+
+<img src="./assets/preview.png" />
+
+
+
+## Local dev
+Running locally:
+```sh
+cd deid
+bun run install
+bun run dev
+``
