@@ -49,15 +49,17 @@ rustup target add "$TARGET"
 echo "→ Building app..."
 (cd piipaya-desktop && bun run tauri build --target "$TARGET")
 
-# ── 4. Find DMG ──────────────────────────────────────────────────────────────
-DMG=$(find "piipaya-desktop/src-tauri/target/$TARGET/release/bundle/dmg" -name "*.dmg" | head -1)
-if [ -z "$DMG" ]; then
+# ── 4. Find DMG and copy out of gitignored target/ ───────────────────────────
+DMG_SRC=$(find "piipaya-desktop/src-tauri/target/$TARGET/release/bundle/dmg" -name "*.dmg" | head -1)
+if [ -z "$DMG_SRC" ]; then
   echo "Error: no .dmg found." && exit 1
 fi
-echo "→ Found: $DMG"
+DMG="/tmp/PIIPAYA_${NEW}_${TARGET}.dmg"
+cp "$DMG_SRC" "$DMG"
+echo "→ DMG: $DMG"
 
 # ── 5. Commit, tag, push ─────────────────────────────────────────────────────
-git add "$TAURI_CONF" "$CARGO_TOML"
+git add "$TAURI_CONF" "$CARGO_TOML" "piipaya-desktop/src-tauri/Cargo.lock"
 git commit -m "chore(desktop): release v$NEW"
 git tag "$TAG"
 git push origin HEAD
