@@ -19,3 +19,10 @@ Architecture must support downloading multiple one-shot models.
 ## FEATURE: Support pronouns
 Research needed before implementation.
 Currently `he`/`she` pronouns are not handled. Add optional config to remap pronouns consistently with replaced entities.
+
+
+## BUG: build process fails
+App gives "“PIIPAYA” is damaged and can’t be opened. You should move it to the Trash.".
+
+
+Can't we simply release the locally build version instead? This whole build setup seems too fragile. Adjust the flow to release a locally build file. Fully autonomous
