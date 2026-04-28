@@ -45,8 +45,8 @@ source "$VENV_DIR/bin/activate"
 python -m pip install --upgrade pip --quiet
 python -m pip install -r src-python/requirements.txt
 
-echo "Downloading spaCy model..."
-python -m spacy download "$SPACY_MODEL"
+# echo "Downloading spaCy model..."
+# python -m spacy download "$SPACY_MODEL"
 
 echo "Verifying environment..."
 echo "python: $(which python)"
